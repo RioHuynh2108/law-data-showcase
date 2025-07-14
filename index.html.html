@@ -2,6 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="utf-8">
+  <title>LawTech Showcase</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -74,6 +75,31 @@
       0% { transform: translateX(100%); }
       100% { transform: translateX(-100%); }
     }
+@media screen and (max-width: 768px) {
+    .animated-title {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .animated-title img {
+      height: 80px; /* thu nhỏ logo trên mobile */
+    }
+
+    .animated-title h1, .animated-title h2 {
+      font-size: 1.2em;
+    }
+
+    .menu {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menu button {
+      width: 90%;
+    }
+  }
   </style>
 <style>
     #video-background {
@@ -88,16 +114,11 @@
 </style>
 <body>
  
-  <iframe 
-  id="video-background"
-  src="https://www.youtube.com/embed/WJxMGccue8w"
-  frameborder="0"
-  allow="autoplay; fullscreen"
-  allowfullscreen
-  style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;">
-</iframe>
-
-  <div class="animated-title" style="background-color: rgba(0,0,0,0.6); padding: 30px 20px; margin: 30px auto; border-radius: 15px; text-align: center; max-width: 1000px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+  <video id="video-background" autoplay loop muted>
+    <source src="videonen1.mp4" type="video/mp4">
+  </video>
+  <div class="animated-title" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; text-align: center;">
+<div class="animated-title" style="background-color: rgba(0,0,0,0.6); padding: 30px 20px; margin: 30px auto; border-radius: 15px; text-align: center; max-width: 1000px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
 <img src="logobca.png" alt="Logo Bộ Công an" style="height: 190px; position: absolute; top: 30px; left: 130px;">
     <h1 class="glow" style="margin: 0 0 10px; font-size: 2em; color: #FFD700; line-height: 1.3;">PHẦN MỀM TRÌNH CHIẾU TƯƠNG TÁC</h1>
     <h1 class="glow" style="margin: 0 0 10px; font-size: 2em; color: #FFD700; line-height: 1.3;">BÀI DỰ THI</h1>
@@ -109,34 +130,26 @@
       📢 Luật dữ liệu trong thời kỳ chuyển đổi số quốc gia - Bước đột phá trong Kỷ nguyên mới - Kỷ nguyên vươn mình của Dân tộc 📢
     </div>
   </div>
-  <iframe 
-  id="video-background"
-  src="https://www.youtube.com/embed/WJxMGccue8w"
-  frameborder="0"
-  allow="autoplay; fullscreen"
-  allowfullscreen
-  style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;">
-</iframe>
+ <video id="video-background" autoplay loop muted>
+    <source src="nen.mp4" type="video/mp4">
+  </video>
   <div style="background-color: rgba(0,0,0,0.6); padding: 20px; margin: 20px auto 10px auto; border-radius: 10px; text-align: center; max-width: 1000px;">
     <p><span style="color: #FFD700;">Nhóm Tác giả:</span> <strong style="color: #FFD700;">CHIẾN BINH VIỄN THÔNG</strong></p>
     <p><span style="color: #FFD700;">Thành viên:</span> <strong style="color: #FFD700;">Thiếu tá Mai Hồ Trung Trinh - Thiếu úy Huỳnh Văn Tài</strong></p>
     <p><span style="color: #FFD700;">Đơn vị:</span> <strong style="color: #FFD700;">Phòng Thông tin liên lạc miền Nam - Cục H04 - Bộ Công an</strong></p>
   </div>
   <div class="menu">
-    <button onclick="showContent('gioithieu')">🏠 Giới thiệu</button>
-    <button onclick="showContent('capthiet')">📌 Cấp thiết</button>
-    <button onclick="showContent('luat')">📚 Luật</button>
-    <button onclick="showContent('video')">🎥 Tình huống</button>
-    <button onclick="showContent('baove')">🛡️ Bảo vệ</button>
-    <button onclick="showContent('quiz')">🧠 Quiz</button>
-    <button onclick="showContent('tailieu')">📎 Tài liệu</button>
-    <button onclick="showContent('thankyou')">🎯 Kết thúc</button>
-  </div>
+    <button onclick="window.location.href='gioithieuchung.html'">📄  Thuyết minh bài dự thi</button>
+    <button onclick="window.location.href='traloicauhoi.html'">📌 Trả lời câu hỏi bài dự thi</button>
+    <button onclick="window.location.href='vanbanluat.html'">📚 Các văn bản Luật liên quan</button>
+    <button onclick="showContent('tinhhuong')">🎥 Tình huống thực tiễn</button>
+    <button onclick="showContent('tracnghiem')">🛡️ Trắc nghiệm khách quan</button>
+    <button onclick="showContent('maQR')">🧠 Mã QR tài liệu</button>
+    <button onclick="showContent('khuyennghi')">📎 Khuyến nghị</button>
+   </div>
 
-  
-
-  <div id="capthiet" class="content">
-    <h2>Tính cấp thiết</h2>
+    <div id="traloicauhoi" class="content">
+    <h2> Trả lời câu hỏi bài dự thi</h2>
     <ul>
       <li>Dữ liệu KH&CN là mục tiêu tấn công và đánh cắp.</li>
       <li>Rò rỉ dữ liệu có thể ảnh hưởng nghiêm trọng đến an ninh và công nghệ.</li>
@@ -154,7 +167,7 @@
     </ul>
   </div>
 
-  <div id="video" class="content" style="max-height: 500px; overflow-y: auto;">
+  <div id="tinhhuong" class="content" style="max-height: 500px; overflow-y: auto;">
     <h2>Video minh họa vi phạm dữ liệu KH&CN</h2>
     <p>1. Viện nghiên cứu bị tấn công mạng, rò rỉ dữ liệu AI quốc phòng.</p>
     <video controls style="width: 480px; height: 270px; border: 2px solid #444; border-radius: 8px;">
@@ -177,8 +190,8 @@
     </ul>
   </div>
 
-  <div id="quiz" class="content">
-    <h2>Trắc nghiệm luật dữ liệu</h2>
+  <div id="tracnghiem" class="content">
+    <h2>Trắc nghiệm khách quan</h2>
     <p>1. Luật nào bảo vệ dữ liệu cá nhân tại VN?</p>
     <p>☐ Luật Giao thông</p>
     <p>☑ Nghị định 13/2023/NĐ-CP</p>
@@ -187,13 +200,13 @@
     <p>☐ Luật Xây dựng</p>
   </div>
 
-  <div id="tailieu" class="content">
+  <div id="maQR" class="content">
     <p><a href="files/LawTech_Showcase_Final.pptx" target="_blank" style="color: #4CAF50; text-decoration: underline;">📥 Tải bài trình chiếu PowerPoint tại đây</a></p>
     <img src="img/qrcode_tai_lieu.png" style="width: 150px;">
   </div>
 
-  <div id="thankyou" class="content">
-    <h2>Cảm ơn!</h2>
+  <div id="khuyennghi" class="content">
+    <h2> Khuyến nghị</h2>
     <p>Nhóm Chiến Binh Viễn Thông<br>Phòng Thông tin Liên lạc Miền Nam</p>
     <p><em>Đồng hành cùng cuộc thi Tìm hiểu Luật Dữ liệu</em></p>
   </div>
